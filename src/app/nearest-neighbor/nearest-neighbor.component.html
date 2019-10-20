@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6" >
+            <div class="row">
+                <div class="form-group form-inline">
+                    <label>X1</label>
+                    <input [(ngModel)]="x1a1" type="number" class="form-control">
+                    <input [(ngModel)]="x1a2" type="number" class="form-control">
+                </div>
+                <div class="form-group form-inline">
+                    <label>X2</label>
+                    <input [(ngModel)]="x2a1" type="number" class="form-control">
+                    <input [(ngModel)]="x2a2" type="number" class="form-control">
+                </div>
+                <div class="form-group form-inline">
+                    <label for="x3">X3</label>
+                    <input [(ngModel)]="x3a1" type="number" class="form-control">
+                    <input [(ngModel)]="x3a2" type="number" class="form-control">
+                </div>
+                <div class="form-group form-inline">
+                    <label for="x4">X4</label>
+                    <input [(ngModel)]="x4a1" type="number" class="form-control">
+                    <input [(ngModel)]="x4a2" type="number" class="form-control">
+                </div>
+                <div class="form-group form-inline">
+                    <label>X5</label>
+                    <input [(ngModel)]="x5a1" type="number" class="form-control">
+                    <input [(ngModel)]="x5a2" type="number" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="calcDistanceMatrix(stepObj1, inputData)">Старт!</button>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="row" style="background-color: #DCDCDC">
+                <span *ngFor="let j of stepObj1.title">
+                    <div class="col-md-2">{{j}}</div>
+                </span>
+            </div>
+            <div *ngFor="let i of stepObj1.distMatrix">
+                <div class="row">
+                    <span *ngFor="let j of i">
+                        <div class="col-md-2" [ngStyle]="{backgroundColor: getColor(j)}" >{{j.value | number}}</div>
+                    </span>
+                </div>
+            </div>
+            <hr>
+            <div class="row" style="background-color: #DCDCDC">
+                <span *ngFor="let j of stepObj2.title">
+                    <div class="col-md-2">{{j}}</div>
+                </span>
+            </div>
+            <div *ngFor="let i of stepObj2.distMatrix">
+                <div class="row">
+                    <span *ngFor="let j of i">
+                        <div class="col-md-2" [ngStyle]="{backgroundColor: getColor(j)}" >{{j.value | number}}</div>
+                    </span>
+                </div>
+            </div>
+            <hr>
+            <div class="row" style="background-color: #DCDCDC">
+                <span *ngFor="let j of stepObj3.title">
+                    <div class="col-md-2">{{j}}</div>
+                </span>
+            </div>
+            <div *ngFor="let i of stepObj3.distMatrix">
+                <div class="row">
+                    <span *ngFor="let j of i">
+                        <div class="col-md-2" [ngStyle]="{backgroundColor: getColor(j)}" >{{j.value | number}}</div>
+                    </span>
+                </div>
+            </div>
+            <hr>
+            <div class="row" style="background-color: #DCDCDC">
+                <span *ngFor="let j of stepObj4.title">
+                    <div class="col-md-2">{{j}}</div>
+                </span>
+            </div>
+            <div *ngFor="let i of stepObj4.distMatrix">
+                <div class="row">
+                    <span *ngFor="let j of i">
+                        <div class="col-md-2" [ngStyle]="{backgroundColor: getColor(j)}" >{{j.value | number}}</div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
