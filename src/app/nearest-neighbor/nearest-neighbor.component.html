@@ -83,6 +83,21 @@
                     </span>
                 </div>
             </div>
+            <hr><hr>
+            <div *ngFor="let i of clusters">
+                <div class="row">
+                    <span>
+                        <h3>Кластер {{i.title}}</h3><br>
+                        <h4>Центр тяжести:</h4><p>{{i.center}}</p><br>
+                        <h4>Дисперсия:</h4><p>{{i.disper | number}}</p>
+                        <h4>Среднеквадратическое отклонение:</h4><p>{{i.avgSq | number}}</p>
+                        <h4>Радиус:</h4><p>{{i.radius | number}}</p>
+                    </span>
+                </div>
+                <hr>
+            </div>
+
+
         </div>
     </div>
 </div>
