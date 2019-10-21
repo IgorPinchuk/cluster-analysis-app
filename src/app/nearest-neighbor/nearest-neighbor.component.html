@@ -27,8 +27,9 @@
                     <input [(ngModel)]="x5a1" type="number" class="form-control">
                     <input [(ngModel)]="x5a2" type="number" class="form-control">
                 </div>
-                <button type="submit" class="btn btn-primary" (click)="calcDistanceMatrix(stepObj1, inputData)">Старт!</button>
+                <button type="submit" class="btn btn-primary" (click)="calcDistanceMatrix(stepObj1)">Старт!</button>
             </div>
+            <div id="chartContainer" style="height: 370px; width: 100%; margin-left:auto;margin-right:auto;"></div>
         </div>
         <div class="col-sm-6">
             <div class="row" style="background-color: #DCDCDC">
